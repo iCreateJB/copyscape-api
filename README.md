@@ -1,7 +1,9 @@
 # Sample
 curl -X POST -H 'Content-Type: application/html' -d '{"data":"Through the looking glass."}' http://localhost:9292/v1/text-search; echo ''
 
+```json
 {"entries":[],"code":400,"total_count":null,"message":["Text attribute can not be blank."]}
+```
 
 curl -X POST -H 'Content-Type: application/json' -d '{"data":"Through the looking glass."}' http://localhost:9292/v1/text-search; echo ''
 
