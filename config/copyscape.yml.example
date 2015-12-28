@@ -1,0 +1,15 @@
+local: &local
+  url: http://www.copyscrape.com/api/
+  username: 'api_broker'
+
+development:
+  <<: *local
+  api_key: ''
+
+test:
+  <<: *local
+  api_key: ''
+
+production:
+  <<: *local
+  api_key: ''
