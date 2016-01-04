@@ -30,6 +30,8 @@ class IesApi < Sinatra::Application
       end
       @params.merge!(body_content)
       @env["rack.request.form_hash"] = body_content
+    else
+      halt render :json, { status: 415, error: 'Unsupported media type'}
     end
   end
 end
