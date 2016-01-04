@@ -17,9 +17,13 @@ end
 
 Rabl.register!
 
+after do
+  response.headers['Content-Type'] = 'application/json'
+end
+
 class IesApi < Sinatra::Application
   def parse_params
-    if @env["CONTENT_TYPE"] == 'application/json'
+    if @env["Content-Type"] == 'application/json'
       rack_input = @env["rack.input"].read
       @env["rack.input"].rewind
       return if rack_input.empty?
