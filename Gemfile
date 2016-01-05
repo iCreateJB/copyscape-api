@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'rabl'
+gem 'oj'
 gem 'faraday'
 gem 'activesupport'
 gem 'nori'
