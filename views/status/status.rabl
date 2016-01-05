@@ -1,3 +1,3 @@
 object @resp
 
-node(:code){ @resp.code }
+node(:message){ @resp.message }
